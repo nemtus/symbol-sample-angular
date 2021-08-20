@@ -1,1 +1,31 @@
-<router-outlet></router-outlet>
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <h1>{{title}}</h1>
+  <div class="spacer"></div>
+  <ng-container *ngFor="let imageLink of imageLinks">
+    <a href="{{imageLink.linkUrl}}" target="_blank" rel="noopener noreferrer">
+      <img mat-card-avatar class="logo-image" src="{{imageLink.imagePath}}">
+    </a>
+  </ng-container>
+</mat-toolbar>
+<mat-sidenav-container fxFlexFill>
+  <mat-sidenav mode="side" opend #sidenav>
+    <mat-nav-list>
+      <ng-container *ngFor="let sideNavLink of sideNavLinks">
+        <mat-list-item>
+          <a routerLink="{{sideNavLink.linkPath}}">
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <mat-icon>{{sideNavLink.icon}}</mat-icon>
+              <span>{{sideNavLink.name}}</span>
+            </div>
+          </a>
+        </mat-list-item>
+      </ng-container>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

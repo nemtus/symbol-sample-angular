@@ -1,23 +1,4 @@
 <h2>Home</h2>
 <app-view-note></app-view-note>
 <app-view-disclaimer></app-view-disclaimer>
-<mat-card>
-  <mat-card-content>
-    <div fxLayout="row" fxLayoutAlign="start start">
-      <mat-icon>info</mat-icon>
-      <h3>Reference</h3>
-    </div>
-    <mat-nav-list>
-      <ng-container *ngFor="let referenceLink of referenceLinks">
-        <mat-list-item>
-          <div fxLayout="row" fxLayoutAlign="start center">
-            <img class="link-image" src="{{referenceLink.imagePath}}">
-            <a href="{{referenceLink.linkUrl}}" target="_blank" rel="noopener noreferrer">
-              {{referenceLink.linkUrl}}
-            </a>
-          </div>
-        </mat-list-item>
-      </ng-container>
-    </mat-nav-list>
-  </mat-card-content>
-</mat-card>
+<app-view-reference></app-view-reference>

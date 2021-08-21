@@ -14,6 +14,7 @@ import { HomeComponent } from './page/home/home.component';
 import { ViewHomeComponent } from './view/home/home.component';
 import { ViewNoteComponent } from './view/common/note/note.component';
 import { ViewDisclaimerComponent } from './view/common/disclaimer/disclaimer.component';
+import { ViewReferenceComponent } from './view/common/reference/reference.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ViewDisclaimerComponent } from './view/common/disclaimer/disclaimer.com
     HomeComponent,
     ViewHomeComponent,
     ViewNoteComponent,
-    ViewDisclaimerComponent
+    ViewDisclaimerComponent,
+    ViewReferenceComponent
   ],
   imports: [
     BrowserModule,

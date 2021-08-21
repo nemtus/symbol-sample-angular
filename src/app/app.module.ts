@@ -13,13 +13,15 @@ import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './page/home/home.component';
 import { ViewHomeComponent } from './view/home/home.component';
 import { ViewNoteComponent } from './view/common/note/note.component';
+import { ViewDisclaimerComponent } from './view/common/disclaimer/disclaimer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ViewHomeComponent,
-    ViewNoteComponent
+    ViewNoteComponent,
+    ViewDisclaimerComponent
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,8 @@ import { ViewHomeComponent } from './view/home/home.component';
 import { ViewNoteComponent } from './view/common/note/note.component';
 import { ViewDisclaimerComponent } from './view/common/disclaimer/disclaimer.component';
 import { ViewReferenceComponent } from './view/common/reference/reference.component';
+import { AccountComponent } from './page/accounts/account/account.component';
+import { ViewAccountComponent } from './view/accounts/account/account.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ViewReferenceComponent } from './view/common/reference/reference.compon
     ViewHomeComponent,
     ViewNoteComponent,
     ViewDisclaimerComponent,
-    ViewReferenceComponent
+    ViewReferenceComponent,
+    AccountComponent,
+    ViewAccountComponent
   ],
   imports: [
     BrowserModule,

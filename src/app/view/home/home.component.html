@@ -1,1 +1,44 @@
-<p>view-home works!</p>
+<h2>Home</h2>
+<mat-card>
+  <mat-card-content>
+    <div fxLayout="row" fxLayoutAlign="start start">
+      <mat-icon color="accent">info</mat-icon>
+      <h3>Note</h3>
+    </div>
+    <p>ブロックチェーンSymbolとSPAフレームワークAngularを用いて作成しているWebアプリケーションのサンプルです。</p>
+  </mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-content>
+    <div fxLayout="row" fxLayoutAlign="start start">
+      <mat-icon color="warn">warning</mat-icon>
+      <h3>Disclaimer</h3>
+    </div>
+    <p>本サイトのご利用に際しては以下の点にご注意ください。</p>
+    <ul>
+      <li>本サイトではSymbolを用いたWebアプリケーションの実装例を示すことに主眼をおいています。</li>
+      <li>本サイトでの実装は十分にテストされていない可能性があることを踏まえ、本サイトのご利用は、実装例を参考にしたり少額のXYMでの動作確認にとどめ、多額のXYMやクリティカルな情報を扱う操作を実行なさならいことを推奨します。</li>
+      <li>本サイトのご利用を通じて生じ得るいかなる問題に対してもNEMTUSとして一切の責任を取ることはできませんのでご注意ください。</li>
+    </ul>
+  </mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-content>
+    <div fxLayout="row" fxLayoutAlign="start start">
+      <mat-icon>info</mat-icon>
+      <h3>Reference</h3>
+    </div>
+    <mat-nav-list>
+      <ng-container *ngFor="let referenceLink of referenceLinks">
+        <mat-list-item>
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <img class="link-image" src="{{referenceLink.imagePath}}">
+            <a href="{{referenceLink.linkUrl}}" target="_blank" rel="noopener noreferrer">
+              {{referenceLink.linkUrl}}
+            </a>
+          </div>
+        </mat-list-item>
+      </ng-container>
+    </mat-nav-list>
+  </mat-card-content>
+</mat-card>

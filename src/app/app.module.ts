@@ -12,12 +12,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './page/home/home.component';
 import { ViewHomeComponent } from './view/home/home.component';
+import { ViewNoteComponent } from './view/common/note/note.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ViewHomeComponent
+    ViewHomeComponent,
+    ViewNoteComponent
   ],
   imports: [
     BrowserModule,

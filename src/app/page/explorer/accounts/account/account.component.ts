@@ -21,35 +21,12 @@ export class AccountComponent implements OnInit {
   account?: Account;
 
   constructor(private route: ActivatedRoute, private accountService: AccountService) {
-    console.log('constructor triggered!');
-    /*
-    this.address$ = this.route.params.pipe(map(params => params.address));
-    this.address$.subscribe((address) => {
-      this.address = address;
-      this.account$ = this.accountService.getAccount$(this.network, this.protocol, address);
-    });
-    this.account$ ? this.account$.subscribe((account) => {
-      console.log('account', account);
-      this.account = account;
-    }) : undefined;
-    */
   }
 
   ngOnInit(): void {
-    console.log('ngOnInit triggered!');
     this.address$ = this.route.params.pipe(map(params => params.address));
     this.account$ = this.address$.pipe(mergeMap((address): Observable<Account> => {
       return this.accountService.getAccount$(this.network, this.protocol, address);
     }));
-    /*
-    this.address$.subscribe((address) => {
-      this.address = address;
-      this.account$ = this.accountService.getAccount$(this.network, this.protocol, address);
-    });
-    this.account$ ? this.account$.subscribe((account) => {
-      console.log('account', account);
-      this.account = account;
-    }) : undefined;
-    */
   }
 }

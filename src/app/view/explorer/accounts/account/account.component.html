@@ -1,50 +1,44 @@
 <h2>Account</h2>
-<mat-card>
-  <mat-card-header>
-    <h3>Address</h3>
-  </mat-card-header>
-  <mat-card-content>
-    <ng-container *ngIf="account$ | async as account">
+<ng-container *ngIf="account$ | async as account">
+  <mat-card>
+    <mat-card-header>
+      <h3>Address</h3>
+    </mat-card-header>
+    <mat-card-content>
       <div class="break-word">{{account.address}}</div>
-    </ng-container>
-  </mat-card-content>
-</mat-card>
-<mat-card>
-  <mat-card-header>
-    <h3>Public Key</h3>
-  </mat-card-header>
-  <mat-card-content>
-    <ng-container *ngIf="account$ | async as account">
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <h3>Public Key</h3>
+    </mat-card-header>
+    <mat-card-content>
       <div class="break-word">{{account.publicKey}}</div>
-    </ng-container>
-  </mat-card-content>
-</mat-card>
-<mat-card>
-  <mat-card-header>
-    <h3>Mosaics</h3>
-  </mat-card-header>
-  <mat-card-content>
-    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="144px">
-      <div>ID</div>
-      <div>Amount</div>
-    </div>
-    <ng-container *ngIf="account$ | async as account">
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <h3>Mosaics</h3>
+    </mat-card-header>
+    <mat-card-content>
+      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="144px">
+        <div>ID</div>
+        <div>Amount</div>
+      </div>
       <ng-container *ngFor="let mosaic of account.mosaics">
         <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="24px">
           <div class="break-word">{{mosaic.id}}</div>
           <div class="break-word">{{mosaic.amount}}</div>
         </div>
       </ng-container>
-    </ng-container>
-  </mat-card-content>
-</mat-card>
-<mat-card>
-  <mat-card-header>
-    <h3>Importance</h3>
-  </mat-card-header>
-  <mat-card-content>
-    <ng-container *ngIf="account$ | async as account">
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <h3>Importance</h3>
+    </mat-card-header>
+    <mat-card-content>
       <div class="break-word">{{account.importanceMicroXym}}</div>
-    </ng-container>
-  </mat-card-content>
-</mat-card>
+    </mat-card-content>
+  </mat-card>
+</ng-container>

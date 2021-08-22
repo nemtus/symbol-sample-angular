@@ -17,9 +17,16 @@
     "target": "es2017",
     "module": "es2020",
     "lib": [
+      // for bigint
+      "es2020",
       "es2018",
       "dom"
-    ]
+    ],
+    // for symbol-sdk
+    "paths" : {
+      "crypto": ["./node_modules/crypto-browserify"],
+      "stream": ["./node_modules/stream-browserify"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

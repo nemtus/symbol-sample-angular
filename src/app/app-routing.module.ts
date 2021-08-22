@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './page/home/home.component';
-import { AccountComponent } from './page/accounts/account/account.component';
+import { AccountComponent } from './page/explorer/accounts/account/account.component';
 
 const routes: Routes = [
   {
@@ -9,7 +9,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'accounts/:address',
+    path: 'explorer/accounts/:address',
     component: AccountComponent
   }
 ];

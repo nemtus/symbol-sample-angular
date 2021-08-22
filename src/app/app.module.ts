@@ -10,11 +10,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HomeComponent } from './page/home/home.component';
 import { ViewHomeComponent } from './view/home/home.component';
 import { ViewNoteComponent } from './view/common/note/note.component';
 import { ViewDisclaimerComponent } from './view/common/disclaimer/disclaimer.component';
 import { ViewReferenceComponent } from './view/common/reference/reference.component';
+import { AccountComponent } from './page/explorer/accounts/account/account.component';
+import { ViewAccountComponent } from './view/explorer/accounts/account/account.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { ViewReferenceComponent } from './view/common/reference/reference.compon
     ViewHomeComponent,
     ViewNoteComponent,
     ViewDisclaimerComponent,
-    ViewReferenceComponent
+    ViewReferenceComponent,
+    AccountComponent,
+    ViewAccountComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,8 @@ import { ViewReferenceComponent } from './view/common/reference/reference.compon
     MatIconModule,
     MatCardModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

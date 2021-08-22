@@ -16,9 +16,7 @@ export class AccountComponent implements OnInit {
   network: Network = 'mainnet';
   protocol: Protocol = environment.protocol as Protocol;
   address$?: Observable<string>;
-  address?: string;
   account$?: Observable<Account>;
-  account?: Account;
 
   constructor(private route: ActivatedRoute, private accountService: AccountService) {
   }

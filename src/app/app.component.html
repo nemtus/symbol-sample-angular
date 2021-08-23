@@ -2,11 +2,11 @@
   <button mat-icon-button (click)="sidenav.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <h1>{{title}}</h1>
+  <h1>{{ title }}</h1>
   <div class="spacer"></div>
   <ng-container *ngFor="let imageLink of imageLinks">
-    <a href="{{imageLink.linkUrl}}" target="_blank" rel="noopener noreferrer">
-      <img class="logo-image" src="{{imageLink.imagePath}}">
+    <a href="{{ imageLink.linkUrl }}" target="_blank" rel="noopener noreferrer">
+      <img class="logo-image" src="{{ imageLink.imagePath }}" />
     </a>
   </ng-container>
 </mat-toolbar>
@@ -15,10 +15,10 @@
     <mat-nav-list>
       <ng-container *ngFor="let sideNavLink of sideNavLinks">
         <mat-list-item>
-          <a routerLink="{{sideNavLink.linkPath}}">
+          <a routerLink="{{ sideNavLink.linkPath }}">
             <div fxLayout="row" fxLayoutAlign="start center">
-              <mat-icon>{{sideNavLink.icon}}</mat-icon>
-              <span>{{sideNavLink.name}}</span>
+              <mat-icon>{{ sideNavLink.icon }}</mat-icon>
+              <span>{{ sideNavLink.name }}</span>
             </div>
           </a>
         </mat-list-item>

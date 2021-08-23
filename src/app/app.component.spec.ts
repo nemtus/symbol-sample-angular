@@ -20,11 +20,9 @@ describe('AppComponent', () => {
         MatIconModule,
         MatCardModule,
         MatSidenavModule,
-        MatListModule
+        MatListModule,
       ],
-      declarations: [
-        AppComponent
-      ],
+      declarations: [AppComponent],
     }).compileComponents();
   });
 

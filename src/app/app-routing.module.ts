@@ -6,16 +6,16 @@ import { AccountComponent } from './page/explorer/accounts/account/account.compo
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'explorer/accounts/:address',
-    component: AccountComponent
-  }
+    component: AccountComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

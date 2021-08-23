@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  protocol: 'https'
+  protocol: 'https',
 };

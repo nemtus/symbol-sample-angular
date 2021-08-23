@@ -8,9 +8,8 @@ describe('ViewDisclaimerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ViewDisclaimerComponent ]
-    })
-    .compileComponents();
+      declarations: [ViewDisclaimerComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

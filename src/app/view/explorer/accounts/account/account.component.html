@@ -5,7 +5,7 @@
       <h3>Address</h3>
     </mat-card-header>
     <mat-card-content>
-      <div class="break-word">{{account.address}}</div>
+      <div class="break-word">{{ account.address }}</div>
     </mat-card-content>
   </mat-card>
   <mat-card>
@@ -13,7 +13,7 @@
       <h3>Public Key</h3>
     </mat-card-header>
     <mat-card-content>
-      <div class="break-word">{{account.publicKey}}</div>
+      <div class="break-word">{{ account.publicKey }}</div>
     </mat-card-content>
   </mat-card>
   <mat-card>
@@ -27,8 +27,8 @@
       </div>
       <ng-container *ngFor="let mosaic of account.mosaics">
         <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="24px">
-          <div class="break-word">{{mosaic.id}}</div>
-          <div class="break-word">{{mosaic.amount}}</div>
+          <div class="break-word">{{ mosaic.id }}</div>
+          <div class="break-word">{{ mosaic.amount }}</div>
         </div>
       </ng-container>
     </mat-card-content>
@@ -38,7 +38,7 @@
       <h3>Importance</h3>
     </mat-card-header>
     <mat-card-content>
-      <div class="break-word">{{account.importanceMicroXym}}</div>
+      <div class="break-word">{{ account.importanceMicroXym }}</div>
     </mat-card-content>
   </mat-card>
 </ng-container>

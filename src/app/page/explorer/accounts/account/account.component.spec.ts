@@ -1,9 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
-import {
-  MatSnackBar,
-  MatSnackBarModule
-} from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { of } from 'rxjs';
 
 import { AccountComponent } from './account.component';
@@ -16,23 +13,19 @@ describe('AccountComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule,
-        MatSnackBarModule
-      ],
-      declarations: [ AccountComponent ],
+      imports: [RouterTestingModule, MatSnackBarModule],
+      declarations: [AccountComponent],
       providers: [
         {
           provide: ActivatedRoute,
           useValue: {
-             params: of({address: 'NDLXI3OMXJCHO2A2ZD54TO4UZJQQV36DQYK33SA'})
-          }
+            params: of({ address: 'NDLXI3OMXJCHO2A2ZD54TO4UZJQQV36DQYK33SA' }),
+          },
         },
         AccountService,
-        MatSnackBar
-      ]
-    })
-    .compileComponents();
+        MatSnackBar,
+      ],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -5,18 +5,32 @@ import { Account } from './account.model';
 import { AccountInfrastructureService } from './account.infrastructure.service';
 
 export interface InterfaceAccountInfrastructureService {
-  getAccount$: (network: Network, protocol: Protocol, address: string) => Observable<Account>;
+  getAccount$: (
+    network: Network,
+    protocol: Protocol,
+    address: string
+  ) => Observable<Account>;
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AccountService {
   account$?: Observable<Account>;
 
-  constructor(private accountInfrastructureService: AccountInfrastructureService) { }
+  constructor(
+    private accountInfrastructureService: AccountInfrastructureService
+  ) {}
 
-  getAccount$(network: Network, protocol: Protocol, address: string): Observable<Account> {
-    return this.accountInfrastructureService.getAccount$(network, protocol, address);
+  getAccount$(
+    network: Network,
+    protocol: Protocol,
+    address: string
+  ): Observable<Account> {
+    return this.accountInfrastructureService.getAccount$(
+      network,
+      protocol,
+      address
+    );
   }
 }

@@ -28,7 +28,7 @@ import { ViewAccountComponent } from './view/explorer/accounts/account/account.c
     ViewDisclaimerComponent,
     ViewReferenceComponent,
     AccountComponent,
-    ViewAccountComponent
+    ViewAccountComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,9 +40,9 @@ import { ViewAccountComponent } from './view/explorer/accounts/account/account.c
     MatCardModule,
     MatSidenavModule,
     MatListModule,
-    MatSnackBarModule
+    MatSnackBarModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

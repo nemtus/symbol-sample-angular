@@ -15,7 +15,7 @@ import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
-  styleUrls: ['./account.component.css']
+  styleUrls: ['./account.component.css'],
 })
 export class AccountComponent implements OnInit {
   network: Network = 'mainnet';
@@ -25,20 +25,27 @@ export class AccountComponent implements OnInit {
   snackBarHorizontalPosition: MatSnackBarHorizontalPosition = 'center';
   snackBarVerticalPosition: MatSnackBarVerticalPosition = 'bottom';
 
-  constructor(private route: ActivatedRoute, private accountService: AccountService, private _snackBar: MatSnackBar) {
-  }
+  constructor(
+    private route: ActivatedRoute,
+    private accountService: AccountService,
+    private _snackBar: MatSnackBar
+  ) {}
 
   ngOnInit(): void {
-    this.address$ = this.route.params.pipe(map(params => params.address));
+    this.address$ = this.route.params.pipe(map((params) => params.address));
     this.account$ = this.address$.pipe(
       mergeMap((address): Observable<Account> => {
-        return this.accountService.getAccount$(this.network, this.protocol, address);
+        return this.accountService.getAccount$(
+          this.network,
+          this.protocol,
+          address
+        );
       }),
       catchError((error) => {
         console.error(error);
         this._snackBar.open('Error', 'Close', {
           horizontalPosition: this.snackBarHorizontalPosition,
-          verticalPosition: this.snackBarVerticalPosition
+          verticalPosition: this.snackBarVerticalPosition,
         });
         throw new Error(error);
       })

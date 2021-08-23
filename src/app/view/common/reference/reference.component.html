@@ -8,9 +8,13 @@
       <ng-container *ngFor="let referenceLink of referenceLinks">
         <mat-list-item>
           <div fxLayout="row" fxLayoutAlign="start center">
-            <img class="link-image" src="{{referenceLink.imagePath}}">
-            <a href="{{referenceLink.linkUrl}}" target="_blank" rel="noopener noreferrer">
-              {{referenceLink.linkUrl}}
+            <img class="link-image" src="{{ referenceLink.imagePath }}" />
+            <a
+              href="{{ referenceLink.linkUrl }}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ referenceLink.linkUrl }}
             </a>
           </div>
         </mat-list-item>

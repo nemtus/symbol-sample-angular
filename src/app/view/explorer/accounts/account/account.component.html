@@ -16,23 +16,40 @@
       <div class="break-word">{{ account.publicKey }}</div>
     </mat-card-content>
   </mat-card>
-  <mat-card>
-    <mat-card-header>
-      <h3>Mosaics</h3>
-    </mat-card-header>
-    <mat-card-content>
-      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="144px">
-        <div>ID</div>
-        <div>Amount</div>
-      </div>
-      <ng-container *ngFor="let mosaic of account.mosaics">
-        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="24px">
-          <div class="break-word">{{ mosaic.id }}</div>
-          <div class="break-word">{{ mosaic.amount }}</div>
+  <ng-container *ngIf="mosaics$ | async as mosaics">
+    <mat-card>
+      <mat-card-header>
+        <h3>Mosaics</h3>
+      </mat-card-header>
+      <mat-card-content>
+        <div fxLayout="row" fxLayoutGap="12px">
+          <div fxLayout="column">
+            <div>Logo</div>
+            <ng-container *ngFor="let mosaic of mosaics">
+              <ng-container *ngIf="mosaic.logo; else unknownMosaic">
+                <img class="logo-image" src="{{ 'assets/' + mosaic.logo }}" />
+              </ng-container>
+              <ng-template #unknownMosaic>
+                <mat-icon>help_outline</mat-icon>
+              </ng-template>
+            </ng-container>
+          </div>
+          <div fxLayout="column">
+            <div>Amount</div>
+            <ng-container *ngFor="let mosaic of mosaics">
+              <div class="break-word">{{ mosaic.relativeAmount }}</div>
+            </ng-container>
+          </div>
+          <div fxLayout="column">
+            <div>Name(Id)</div>
+            <ng-container *ngFor="let mosaic of mosaics">
+              <div class="break-word">{{ mosaic.name }}</div>
+            </ng-container>
+          </div>
         </div>
-      </ng-container>
-    </mat-card-content>
-  </mat-card>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
   <mat-card>
     <mat-card-header>
       <h3>Importance</h3>

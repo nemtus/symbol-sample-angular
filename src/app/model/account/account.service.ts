@@ -27,10 +27,11 @@ export class AccountService {
     protocol: Protocol,
     address: string
   ): Observable<Account> {
-    return this.accountInfrastructureService.getAccount$(
+    this.account$ = this.accountInfrastructureService.getAccount$(
       network,
       protocol,
       address
     );
+    return this.account$;
   }
 }
